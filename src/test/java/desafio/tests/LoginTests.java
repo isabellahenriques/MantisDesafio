@@ -1,4 +1,6 @@
-import base.BaseTests;
+package desafio.tests;
+
+import desafio.bases.BaseTests;
 import org.testng.annotations.Test;
 
 public class LoginTests extends BaseTests {
@@ -10,4 +12,5 @@ public class LoginTests extends BaseTests {
         passwordPage.setPassword("DB2SWD");
         passwordPage.clickButtonEntrar();
     }
+
 }

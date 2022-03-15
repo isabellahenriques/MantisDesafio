@@ -1,12 +1,12 @@
-package base;
+package desafio.bases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import pages.LoginPage;
-import pages.PasswordPage;
+import desafio.pages.LoginPage;
+import desafio.pages.PasswordPage;
 
 public class BaseTests {
     private WebDriver driver;
@@ -15,7 +15,7 @@ public class BaseTests {
 
     @BeforeClass
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "src/test/main/resources/chromedriver99.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver99.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         goHome();
@@ -31,7 +31,7 @@ public class BaseTests {
 
     @AfterClass
     public void tearDown() {
-        driver.quit();
+//        driver.quit();
     }
 
 }

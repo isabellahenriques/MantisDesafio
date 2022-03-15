@@ -15,7 +15,7 @@ public class BaseTests {
 
     @BeforeClass
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver99.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/main/resources/chromedriver99.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         goHome();
@@ -31,7 +31,7 @@ public class BaseTests {
 
     @AfterClass
     public void tearDown() {
-//        driver.quit();
+        driver.quit();
     }
 
 }

@@ -1,10 +1,9 @@
 package desafio.bases;
 
-import desafio.pages.DriverFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import static desafio.pages.DriverFactory.getDriver;
+import static desafio.bases.DriverFactory.getDriver;
 
 
 public class BaseTests {

@@ -1,7 +1,7 @@
 package desafio.pages;
 
 import org.openqa.selenium.By;
-import static desafio.pages.DriverFactory.getDriver;
+import static desafio.bases.DriverFactory.getDriver;
 
 public class LoginPage {
 

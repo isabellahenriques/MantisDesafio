@@ -1,4 +1,4 @@
-package desafio.pages;
+package desafio.bases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

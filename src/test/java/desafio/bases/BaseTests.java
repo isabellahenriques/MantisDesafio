@@ -16,7 +16,6 @@ public class BaseTests {
 
     @AfterMethod
     public void tearDown() {
-        //Fechar o navegador
         DriverFactory.killDriver();
     }
 }

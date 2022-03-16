@@ -9,6 +9,7 @@ public class PasswordPage {
     private By passwordField = By.id("password");
     private By clickButtonEntrarPassword = By.xpath("//input[@type='submit']");
 
+
     public void setPassword(String password) {
         getDriver().findElement(passwordField ).sendKeys(password);
     }
@@ -17,5 +18,12 @@ public class PasswordPage {
         getDriver().findElement(clickButtonEntrarPassword).click();
     }
 
+    public String getText(By by) {
+        return getDriver().findElement(by).getText();
+    }
+
+    public String getText(String xpath) {
+        return getText(By.xpath(xpath));
+    }
 
 }

@@ -1,34 +1,22 @@
 package desafio.bases;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.*;
-import desafio.pages.LoginPage;
-import desafio.pages.PasswordPage;
+import desafio.pages.DriverFactory;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import static desafio.pages.DriverFactory.getDriver;
+
 
 public class BaseTests {
-    private WebDriver driver;
-    protected LoginPage loginPage;
-    protected PasswordPage passwordPage;
-
-    @BeforeClass
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver99.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        goHome();
-    }
 
     @BeforeMethod
-    public void goHome(){
-        driver.get("http://127.0.0.1:8989");
-        loginPage = new LoginPage(driver);
-        passwordPage = new PasswordPage(driver);
-
+    public void setUp() {
+        getDriver().navigate().to("http://127.0.0.1:8989");
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown() {
-//        driver.quit();
+        //Fechar o navegador
+        DriverFactory.killDriver();
     }
 }

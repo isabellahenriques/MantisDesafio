@@ -1,23 +1,20 @@
 package desafio.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+
+import static desafio.pages.DriverFactory.getDriver;
 
 public class PasswordPage {
-    private WebDriver driver;
-    private By passwordField = By.id("password");
-    private By clickButtonEntrar = By.xpath("//input[@type='submit']");
 
-    public PasswordPage(WebDriver driver) {
-        this.driver = driver;
-    }
+    private By passwordField = By.id("password");
+    private By clickButtonEntrarPassword = By.xpath("//input[@type='submit']");
 
     public void setPassword(String password) {
-        driver.findElement(passwordField ).sendKeys(password);
+        getDriver().findElement(passwordField ).sendKeys(password);
     }
 
-    public void clickButtonEntrar() {
-        driver.findElement(clickButtonEntrar).click();
+    public void setClickButtonEntrarPassword() {
+        getDriver().findElement(clickButtonEntrarPassword).click();
     }
 
 

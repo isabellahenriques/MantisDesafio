@@ -1,5 +1,6 @@
 package desafio.bases;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -11,7 +12,7 @@ public class DriverFactory {
 
     public static WebDriver getDriver(){
         if(driver == null) {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver99.exe");
+            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().window().maximize();
         }

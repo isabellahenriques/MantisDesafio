@@ -19,7 +19,7 @@ public class PasswordPage {
     }
 
     public String getText(By by) {
-        return getDriver().findElement(by).getText();
+       return getDriver().findElement(by).getText();
     }
 
     public String getText(String xpath) {

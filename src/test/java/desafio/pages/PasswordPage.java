@@ -9,7 +9,6 @@ public class PasswordPage {
     private By passwordField = By.id("password");
     private By clickButtonEntrarPassword = By.xpath("//input[@type='submit']");
 
-
     public void setPassword(String password) {
         getDriver().findElement(passwordField ).sendKeys(password);
     }

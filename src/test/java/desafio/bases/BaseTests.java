@@ -12,7 +12,6 @@ public class BaseTests {
         getDriver().navigate().to("http://127.0.0.1:8989");
     }
 
-
     @AfterMethod
     public void tearDown() {
         DriverFactory.killDriver();
